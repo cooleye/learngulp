@@ -1,9 +1,11 @@
 {
-  "name": "learnnode",
+  "name": "learngulp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
   "devDependencies": {
     "gulp-concat": "^2.6.0",
     "gulp-imagemin": "^3.0.3",

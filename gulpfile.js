@@ -15,7 +15,7 @@ gulp.task('css', function() {
     .pipe(gulp.dest('dist'))
 });
 // script
-gulp.task('scripts', function() {
+gulp.task('script', function() {
   return gulp.src('src/js/*.js')
     .pipe(concat('main.js'))
     .pipe(rename({ suffix: '.min' }))
@@ -30,7 +30,7 @@ gulp.task('images', function() {
 });
 // 默认任务
 gulp.task('default', function() {
-    gulp.start('css', 'scripts', 'images');
+    gulp.start('script', 'css', 'images');
 });
 
 // 监视
@@ -38,7 +38,7 @@ gulp.task('watch', function() {
   // 监视css文件的改动
   gulp.watch('src/css/*.css', ['css']);
   // 监视js文件的改动
-  gulp.watch('src/js/*.js', ['scripts']);
+  gulp.watch('src/js/*.js', ['script']);
   // 监视images文件的改动
   gulp.watch('src/images/*', ['images']);
   // 创建浏览器自动刷新服务器
